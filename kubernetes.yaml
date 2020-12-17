@@ -37,19 +37,19 @@ spec:
           ports:
             - containerPort: 80
           imagePullPolicy: Always
-          volumeMounts:
-            - name: logs
-              mountPath: /logs
-            - name: data
-              mountPath: /data
-            - name: files
-              mountPath: /files
+#          volumeMounts:
+#            - name: logs
+#              mountPath: /logs
+#            - name: data
+#              mountPath: /data
+#            - name: files
+#              mountPath: /files
       imagePullSecrets:
         - name: regcred
-      volumes:
-        - name: logs
-          persistentVolumeClaim:
-            claimName: PVC_LOGS
-        - name: data
-          persistentVolumeClaim:
-            claimName: PVC_DATA
+#      volumes:
+#        - name: logs
+#          persistentVolumeClaim:
+#            claimName: PVC_LOGS
+#        - name: data
+#          persistentVolumeClaim:
+#            claimName: PVC_DATA
